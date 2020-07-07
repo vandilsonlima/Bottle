@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eaW-rW-18i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lzd-Fo-a8D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bottle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Bottle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,20 +37,43 @@
                                     <constraint firstAttribute="height" constant="330" id="QUq-20-dvC"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j49-T2-oYu">
+                                <rect key="frame" x="322" y="770" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="OtE-UD-rhT"/>
+                                    <constraint firstAttribute="width" constant="60" id="ZMa-si-mMa"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSZ-sV-ZEu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j49-T2-oYu" secondAttribute="bottom" constant="32" id="7OJ-Zg-bBJ"/>
                             <constraint firstItem="As2-dQ-19f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8R6-MG-GL6"/>
                             <constraint firstItem="Iny-EX-JUn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HLI-6w-FQh"/>
                             <constraint firstItem="bHn-fR-iLM" firstAttribute="bottom" secondItem="Iny-EX-JUn" secondAttribute="bottom" id="Jbc-hf-cD5"/>
                             <constraint firstItem="As2-dQ-19f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V4d-AQ-vIk"/>
                             <constraint firstItem="Iny-EX-JUn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r5X-5Q-IAP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j49-T2-oYu" secondAttribute="trailing" constant="32" id="r6j-RB-CT9"/>
                             <constraint firstItem="bHn-fR-iLM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJW-eR-IxO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="drop.triangle" catalog="system" id="RCb-c6-71l"/>
+                    <navigationItem key="navigationItem" id="9A6-Mp-PQ5">
+                        <barButtonItem key="rightBarButtonItem" image="gear" catalog="system" style="plain" id="EfM-4a-BEX">
+                            <connections>
+                                <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" id="34g-sL-pL3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="j49-T2-oYu" id="VCD-Bi-z34"/>
                         <outlet property="emptyBottleImageView" destination="Iny-EX-JUn" id="9m9-3e-fEK"/>
                         <outlet property="fullBottleImageView" destination="As2-dQ-19f" id="4dT-Ro-ubL"/>
                         <outlet property="levelConstraint" destination="Jbc-hf-cD5" id="pOF-Wd-isC"/>
@@ -58,41 +81,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.71014492753636" y="127.90178571428571"/>
+            <point key="canvasLocation" x="254" y="177"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Fev-j8-AYV">
+        <!--Navigation Controller-->
+        <scene sceneID="4na-Sr-VVg">
             <objects>
-                <viewController id="fUp-nl-epr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZgX-9s-Zco">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="9ES-9h-RcP"/>
-                    </view>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lzd-Fo-a8D" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" selectedImage="gear" id="IsO-BR-9Pf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdy-u0-tkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1896" y="125"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="3Z9-SN-Bv0">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eaW-rW-18i" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6oY-tA-two">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kjd-Ab-opX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xur-Ra-wm2"/>
-                        <segue destination="fUp-nl-epr" kind="relationship" relationship="viewControllers" id="VJr-SC-DGc"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hpd-9u-0xq"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bhP-da-1dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0o-QV-fbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.565217391304358" y="127.90178571428571"/>
+            <point key="canvasLocation" x="-491" y="177"/>
         </scene>
     </scenes>
     <resources>
@@ -100,5 +108,6 @@
         <image name="bottle-full-dark" width="310" height="898"/>
         <image name="drop.triangle" catalog="system" width="64" height="56"/>
         <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>

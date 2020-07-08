@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>136595780553-jipblrioo6m60vb925h2e1f4rd25lv4t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.136595780553-jipblrioo6m60vb925h2e1f4rd25lv4t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDYC_D-IZIpOsynwBfs6npaIdiYFJRwc-w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>136595780553</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vandilson.lima.bottle</string>
+	<key>PROJECT_ID</key>
+	<string>bottle-cd56a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bottle-cd56a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:136595780553:ios:eb32314a7df0513136ee18</string>
+	<key>DATABASE_URL</key>
+	<string>https://bottle-cd56a.firebaseio.com</string>
+</dict>
+</plist>

@@ -11,6 +11,7 @@
 		88797A1F24B258A900635D4A /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88797A1E24B258A900635D4A /* UIView+Utils.swift */; };
 		88797A2224B2615500635D4A /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88797A2124B2615500635D4A /* NotificationScheduler.swift */; };
 		88797A2424B280BB00635D4A /* Bottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88797A2324B280BB00635D4A /* Bottle.swift */; };
+		88797A2624B657B200635D4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88797A2524B657B200635D4A /* GoogleService-Info.plist */; };
 		88BE120F24A2B21000E70A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE120E24A2B21000E70A0B /* AppDelegate.swift */; };
 		88BE121124A2B21000E70A0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE121024A2B21000E70A0B /* SceneDelegate.swift */; };
 		88BE121324A2B21000E70A0B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE121224A2B21000E70A0B /* HomeViewController.swift */; };
@@ -27,6 +28,7 @@
 		88797A1E24B258A900635D4A /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		88797A2124B2615500635D4A /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		88797A2324B280BB00635D4A /* Bottle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bottle.swift; sourceTree = "<group>"; };
+		88797A2524B657B200635D4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88BE120B24A2B21000E70A0B /* Bottle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BE120E24A2B21000E70A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88BE121024A2B21000E70A0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		88BE120D24A2B21000E70A0B /* Bottle */ = {
 			isa = PBXGroup;
 			children = (
+				88797A2524B657B200635D4A /* GoogleService-Info.plist */,
 				88797A2024B2612700635D4A /* notifications */,
 				88797A1D24B2588D00635D4A /* utils */,
 				88BE122D24AC11DD00E70A0B /* modules */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BE121B24A2B21300E70A0B /* LaunchScreen.storyboard in Resources */,
+				88797A2624B657B200635D4A /* GoogleService-Info.plist in Resources */,
 				88BE122324A3E05E00E70A0B /* Assets.xcassets in Resources */,
 				88BE121624A2B21000E70A0B /* Main.storyboard in Resources */,
 			);

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var fullBottleImageView: UIImageView!
     @IBOutlet weak var emptyBottleImageView: UIImageView!
     @IBOutlet weak var levelConstraint: NSLayoutConstraint!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,10 @@ class HomeViewController: UIViewController {
         setDarkModeImages()
         update()
         registerForNotifications()
+
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
 
     func registerForNotifications() {

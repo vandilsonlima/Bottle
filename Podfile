@@ -8,4 +8,7 @@ target 'Bottle' do
   # Pods for Bottle
   pod 'Eureka'
 
+  pod 'Firebase/Analytics'
+  pod 'Google-Mobile-Ads-SDK'
+  
 end

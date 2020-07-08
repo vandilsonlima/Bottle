@@ -50,17 +50,27 @@
                                     <action selector="didTapAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSZ-sV-ZEu"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sf-6U-wf9" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="88" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aiQ-ki-i3z"/>
+                                    <constraint firstAttribute="width" constant="320" id="smj-LM-a0M"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j49-T2-oYu" secondAttribute="bottom" constant="32" id="7OJ-Zg-bBJ"/>
                             <constraint firstItem="As2-dQ-19f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8R6-MG-GL6"/>
                             <constraint firstItem="Iny-EX-JUn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HLI-6w-FQh"/>
+                            <constraint firstItem="2Sf-6U-wf9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IdV-41-CoT"/>
                             <constraint firstItem="bHn-fR-iLM" firstAttribute="bottom" secondItem="Iny-EX-JUn" secondAttribute="bottom" id="Jbc-hf-cD5"/>
                             <constraint firstItem="As2-dQ-19f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V4d-AQ-vIk"/>
                             <constraint firstItem="Iny-EX-JUn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r5X-5Q-IAP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j49-T2-oYu" secondAttribute="trailing" constant="32" id="r6j-RB-CT9"/>
                             <constraint firstItem="bHn-fR-iLM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJW-eR-IxO"/>
+                            <constraint firstItem="2Sf-6U-wf9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yuI-B0-k4L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -74,6 +84,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="j49-T2-oYu" id="VCD-Bi-z34"/>
+                        <outlet property="bannerView" destination="2Sf-6U-wf9" id="Awc-Ig-h5s"/>
                         <outlet property="emptyBottleImageView" destination="Iny-EX-JUn" id="9m9-3e-fEK"/>
                         <outlet property="fullBottleImageView" destination="As2-dQ-19f" id="4dT-Ro-ubL"/>
                         <outlet property="levelConstraint" destination="Jbc-hf-cD5" id="pOF-Wd-isC"/>
